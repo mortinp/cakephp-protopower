@@ -1,0 +1,74 @@
+/* ELEMENTS TOOLBARS */
+/*.toolbar-container{
+	 width:70%;
+}*/
+
+.right-toolbar {
+    width:30%;
+    /*height:50px;*/
+    margin:0px;
+    padding:0px;
+    background-color:#fff;
+    float:right;
+}
+
+.left-toolbar {
+    width:30%;
+    /*height:50px;*/
+    margin:0px;
+    padding:0px;
+    background-color:#fff;
+    float:left;
+}
+
+.top-toolbar {
+    width:30%;
+    height:40px;
+    /*margin:0px;
+	padding:0px;*/
+    background-color:#fff;
+}
+
+ul.toolbar{
+    position:absolute;
+    /*width:10%;*/
+    /*height:50px;*/
+    margin:0px;
+    /*padding:5px;*/
+    background-color:#fff;
+    /*border-bottom:2px solid #ccc;*/
+    /*border-left: 1px solid #000;*/
+    list-style-type:none;
+    /*padding-left: 0pt;*/
+    /*float:right;*/
+}
+
+ul.inline li{
+    display:inline;
+}
+
+ul.toolbar li a{
+    float:left;
+    cursor:pointer;
+    /*float:right;*/
+    display: block;
+    /*width:70px;
+	height:52px;*/
+    /*opacity: 0.6;*/
+}
+
+ul.toolbar li a:hover{
+    opacity: 1.0;
+}
+
+.toolbar-button {
+    float:left;
+}
+
+/*.transparent{
+	opacity: 0.6;
+}*/
+
+/*a.delete-button {
+	background:#fff url(../img/info.png) no-repeat center center;
+}*/

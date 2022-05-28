@@ -1,0 +1,7 @@
+a.list-item:hover {
+    text-decoration: none;
+}
+
+a.list-item:hover > .list-item-ref {
+    text-decoration: underline;
+}

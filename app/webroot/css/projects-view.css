@@ -1,0 +1,25 @@
+a.list-item:hover {
+    text-decoration: none;
+}
+
+a.list-item:hover > .list-item-ref {
+    text-decoration: underline;
+}
+
+/*#datablocks-outerframe {
+	overflow:hidden;
+	width:100%; 
+	height:450px;
+	border:1px solid #ccc;
+}
+
+#datablocks-innerframe {
+	overflow:scroll; 
+	width:105%; 
+	height:467px;
+}*/
+
+.datablock {
+    width:/*93%*/100%;
+    padding-bottom:10px;
+}

@@ -1,0 +1,114 @@
+/* STYLE DE L'AFFICHAGE DE LA TABLE */
+.box {
+    background: white;
+    /*max-width: 700px;*/
+    /*margin: 10px auto;*/
+}
+
+.thick-border {
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    box-shadow : 0px 1px 8px 0px white;
+}
+
+.thick-border:hover , .thick-border.visible {
+    border: 1px solid #dfdfdf;
+    box-shadow : 0px 1px 8px 0px #d6d6d6;
+}
+
+.tools {
+    /*border-top: 1px solid #dfdfdf;*/
+    margin: 0;
+    visibility: hidden;
+    opacity:0;/*fallback*/
+}
+
+.tools-no-border {
+    
+}
+
+.box:hover .tools , .box.visible .tools {
+    visibility: visible;
+    opacity:1;/*fallback*/
+}
+
+.bouton {
+    display: inline-block;
+    /*border-right: 1px solid #dfdfdf;*/
+    padding: 10px;
+    /*font-family: 'Happy Monkey', cursive;*/
+    /*font-weight: lighter;
+    font-size: 16px;*/
+    letter-spacing: 0px;
+    margin: 0;
+    line-height: 24px;
+    color: #d4d4d4;
+    
+    padding: 3px;
+    padding-right:10px;
+}
+
+/*.small {
+    padding: 3px;
+    padding-right:10px;
+}*/
+
+.bouton a {
+    color: #d4d4d4;
+    -webkit-transition-property:color;-webkit-transition-duration:0.3s;
+    -moz-transition-property:color;-moz-transition-duration:0.3s;
+    transition-property:color;transition-duration:0.3s;
+    text-decoration: none;
+}
+
+.bouton a:hover {
+    color: #555;
+    text-decoration: none;
+}
+
+.bouton a.checked {
+    opacity: 1;
+}
+
+.bouton a.unchecked {
+    opacity: 0.6;
+}
+
+.bouton a.unchecked:hover {
+    opacity: 1;
+}
+
+/* CSS RESPONSIVE PETITS ECRANS */
+/*@media only screen and (max-width:767px){
+
+    body {padding: 0;}
+    .container-fluid {padding: 0 10px;}
+    h1 {font-size: 45px;}
+    h2 ,#crea h4 {font-size: 20px;}
+    #crea label , #crea input {font-size: 16px;}
+    #crea {border: 1px solid #bfbfbf;}
+    p.advice {margin-left: 2px;}
+    p.content {font-size: 13px; line-height: 20px;}
+
+}
+
+
+@media only screen and (max-width:491px){
+    .cadre h3 {text-align: center;}
+    .cadre h3 .indice {display: block;}
+    .champ {display: block; text-align: left;}
+    .legend-gp {display: block;}
+    #lesViews {display: none;}
+
+}
+
+@media only screen and (min-width:1000px){
+    #frame .box { max-width: 960px; margin: 70px auto;}
+    #frame .cadre h3 {font-size: 32px;}
+    #frame .cadre h3 .indice {font-size: 18px;}
+    #frame .champ {font-size: 18px; height: 30px; line-height: 30px;}
+    #frame .champ .indice {font-size: 14px;}
+    #frame .legends {font-size: 16px;}
+    #frame .legend {height: 12px; width: 12px;}
+}*/

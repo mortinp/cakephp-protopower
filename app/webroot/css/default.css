@@ -1,0 +1,138 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #E7E7E7
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+/*body > .container {
+  padding: 60px 15px 0;
+}*/
+
+#footer > .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#user-toolbar {
+    height:35px;
+    width:100%;
+    overflow:hidden;
+    /*position:fixed;*/
+    background-color:#FFF;
+    top:0;z-index:1000000;
+    border:1px solid #ccc;
+    /*opacity:0.9;*/
+}
+
+/*#content {
+    
+    clear:both;
+}*/
+
+.header-elem {
+    margin:3px;
+}
+
+/*form{
+    width:500px;
+    margin:0 auto;
+}*/
+.search { 
+    padding:6px 15px 6px 30px; 
+    /*margin:3px; */
+    background: url('../img/search.png') no-repeat 8px 6px; 
+}
+
+.rounded { 
+    border-radius:15px; 
+    -moz-border-radius:15px; 
+    -webkit-border-radius:15px; 
+}
+
+input[type=text].search{
+    padding:6px 15px 6px 30px; 
+    height:15px;
+    color:#bcbcbc;
+}
+
+/*input[type=button], input[type=button]:hover {
+    position:relative; 
+    left:-6px;
+    border:1px solid #adc5cf;
+    background: #e4f1f9;
+    background: -moz-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4f1f9), color-stop(100%,#d5e7f3)); 
+    background: -webkit-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%);
+    background: -o-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%);
+    background: -ms-linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%);
+    background: linear-gradient(top, #e4f1f9 0%,#d5e7f3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f1f9', endColorstr='#d5e7f3',GradientType=0 );
+    color:#7da2aa;
+    cursor: pointer;
+}
+
+.lighter, .light, .dark {
+    width:95%;
+    height:50px;
+    padding:40px 25px;
+}
+
+.lighter{
+    background: url('../img/lighter_grey.jpg');
+}
+.lighter input[type=text]{
+    border:1px solid #d0d0d0;
+    background-color:#fcfcfc;
+}
+
+.light{
+    background: url('../img/light_grey.jpg');
+}
+.light input[type=text]{
+    border:1px solid #acb1b7;
+    background-color:#fcfcfc;
+}
+
+.dark{
+    background: url('../img/dark_grey.jpg');
+}
+.dark input[type=text]{
+    border:1px solid #2a2e31;
+    background-color:#2d3035;
+    color:#505358;
+}*/

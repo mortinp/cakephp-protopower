@@ -1,0 +1,141 @@
+Primeros pasos:
+_______________
+
+1- Extraer el código de la app en el directorio raíz para las aplicaciones. Por ejemplo, yo en Windows con WAMP tengo algo como:
+
+C://wamp/www/cakephp-protopower/
+   app/
+      webroot/
+   lib/
+   plugins/
+   vendors/
+   .htaccess
+   index.php
+
+y accedo a la app por: http://localhost/cakephp-protopower/
+
+2- Crear una BD PostrgeSQL llamada 'pqm'. Importar el archivo pqm.sql que te adjunto (eso es un script, asi que puedes tambien copiar los comandos sql y ejecutarlos).
+La BD se accede con el usuario 'pqm' y password 'pqm'; tienes que crear este usuario en el servidor.
+
+Esto pasos no deben tener problemas. Pudieras cambiar los nombres de las cosas, pero luego tienes que configurar en correspondencia.
+
+
+Requerimientos:
+_______________
+
+
+Estoy usando el framework CakePHP 2.4.0, y WAMP en Windows, con Apache 2.2.21, PHP 5.3.8 y MySQL 9.0.
+
+La documentación de CakePHP dice:
+
+Requirements
+• HTTP Server. For example: Apache. mod_rewrite is preferred, but by no means required.
+• PHP 5.2.8 or greater.
+
+Technically a database engine isn’t required, but we imagine that most applications will utilize one.
+
+CakePHP supports a variety of database storage engines:
+
+• MySQL (4 or greater)
+• PostgreSQL
+• Microsoft SQL Server
+• SQLite
+
+Note: All built-in drivers require PDO. You should make sure you have the correct PDO extensions installed.
+
+
+Archivo de configuración de Apache (httpd.conf):
+________________________________________________
+
+Algunas configuraciones que yo tengo en httpd.conf:
+
+1-
+LoadModule rewrite_module modules/mod_rewrite.so
+
+En Linux podría ser:
+
+LoadModule rewrite_module libexec/apache2/mod_rewrite.so
+
+2-
+DocumentRoot "c:/wamp/www/"
+
+3-
+<Directory />
+    Options FollowSymLinks
+    AllowOverride All
+#    Order deny,allow
+#    Deny from all
+</Directory>
+
+En este caso, me imagino que para un dominio se deba configurar algo diferente, pero lo importante es que el directorio definido para la app tenga AllowOverride All.
+
+También hay algo importante aquí: la raíz de la aplicación debe referenciar el directorio app/webroot.
+
+La documentación dice:
+
+Unpack the contents of the CakePHP archive into a directory of your choice. For the purposes of this example, we assume you chose to install CakePHP into /cake_install. Your production setup will look like this on the filesystem:
+/cake_install/
+   app/
+      webroot/ (this directory is set as the ‘‘DocumentRoot‘‘ directive)
+   lib/
+   plugins/
+   vendors/
+   .htaccess
+   index.php
+
+
+Developers using Apache should set the DocumentRoot directive for the domain to:
+
+DocumentRoot /cake_install/app/webroot
+
+If your web server is configured correctly, you should now find your CakePHP application accessible at http://www.example.com.
+
+
+4- También, para PostgeSQL en Windows hay que poner en httpd.conf algo como:
+
+LoadFile "C:/postgresql/bin/libpq.dll"
+
+
+Archivo de configuración de PHP (php.ini)
+_________________________________________
+
+Aquí no hay que hacer nada importante, solamente tener los modulos php_pgsql y php_pdo_pgsql activados:
+
+extension=php_pgsql.dll
+extension=php_pdo_pgsql.dll
+
+
+Configuración de la BD en la app:
+_________________________________
+
+En la carpeta /app/Config/database.php está todo lo referente a esto. Ahí puedes configurar todo lo que quieras, aunque debe trabajar bien tal como está.
+
+La configuración actual está en la variable $postgres. Si haces alguna configuración, hazla dentro de esta variable.
+
+
+
+Otras cosas de interés:
+_______________________
+
+-Recuerda reiniciar el Apache cuando hagas cambios en httpd.conf
+
+
+-La documentación de CakePHP dice:
+
+Verify that your .htaccess files are actually in the right directories.
+
+This can happen during copying because some operating systems treat files that start with ‘.’ as hidden and therefore won’t see them to copy.
+
+
+-Para generar urls en la app, yo uso funciones de CakePHP que generar urls. Por ejemplo, algo como:
+
+$this->Html->link('Texto del Link', array('controller'=>'x_controller', 'action'=>'x_action'));
+
+o
+
+$this->url('/', false);
+
+Me imagino que el framework use configuraciones de variables globales puestas por PHP al iniciarse, y todo funcione bien, pero te comento esto por si tienes problemas y las urls se generan mal; realmente esto NO es tan importante...
+
+
+(Con esto ya deberías poder desplegar bien la app!!!)
